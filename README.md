@@ -1,2 +1,2 @@
-# qkacoin.github.io
-website of qkacoin
+# quokkacoin.github.io
+ok
