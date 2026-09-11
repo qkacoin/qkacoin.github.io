@@ -111,6 +111,29 @@
   details[open] summary::after{transform:rotate(45deg)}
   details .a{padding:0 22px 20px; color:#5d4f40; font-size:14.5px}
   details .a a{color:var(--o2); font-weight:600; border-bottom:1px dashed var(--o2)}
+  /* ---------- Game section (dark stage) ---------- */
+  .game{background:linear-gradient(180deg,transparent,rgba(14,22,34,.06) 12%,rgba(14,22,34,.06) 88%,transparent)}
+  .stage{background:linear-gradient(180deg,#0e1622,#0f252d 55%,#082220); border-radius:var(--r-lg); border:1px solid rgba(25,88,78,.5); box-shadow:0 24px 60px rgba(14,22,34,.35); padding:clamp(28px,5vw,56px); position:relative; overflow:hidden}
+  .stage::before{content:""; position:absolute; width:520px; height:520px; border-radius:50%; filter:blur(100px); opacity:.5; background:radial-gradient(circle,#19584e,transparent 65%); top:-180px; left:-140px; pointer-events:none}
+  .stage::after{content:""; position:absolute; width:420px; height:420px; border-radius:50%; filter:blur(110px); opacity:.35; background:radial-gradient(circle,#19584e,transparent 65%); bottom:-200px; right:-120px; pointer-events:none}
+  .stage > *{position:relative; z-index:1}
+  .stage .kicker{color:#7fd8c4}
+  .stage h2{color:#e1f1f5}
+  .stage p.tagline{color:#9fb3b8; margin-top:12px}
+  .game-hero{margin:30px 0 0; border-radius:var(--r-md); overflow:hidden; border:1px solid rgba(25,88,78,.45); box-shadow:0 18px 44px rgba(0,0,0,.4)}
+  .game-hero img{display:block; width:100%; aspect-ratio:16/9; object-fit:cover}
+  .roles{margin:30px 0 0; display:grid; grid-template-columns:repeat(10,1fr); gap:12px}
+  .role{text-align:center}
+  .role img{width:100%; height:auto; max-width:96px; display:block; margin:0 auto; filter:drop-shadow(0 6px 14px rgba(0,0,0,.45))}
+  .role span{display:block; margin-top:8px; font-size:11px; line-height:1.3; color:#9fb3b8; font-weight:600}
+  .game-actions{margin-top:34px; text-align:center}
+  @media (max-width:920px){
+    .roles{grid-template-columns:repeat(5,1fr); gap:14px}
+  }
+  @media (max-width:480px){
+    .roles{grid-template-columns:repeat(3,1fr)}
+    .role span{font-size:10px}
+  }
   /* ---------- Footer ---------- */
   footer{margin-top:40px; border-top:1px solid rgba(198,139,89,.18); padding:40px 0 34px; text-align:center; background:#FFF3E4}
   .foot-brand{display:inline-flex; align-items:center; gap:10px; font-family:var(--f-display); font-weight:800; font-size:22px}
@@ -153,6 +176,7 @@
     <ul class="nav-links" id="navLinks">
       <li><a href="#story">About</a></li>
       <li><a href="#token">Token</a></li>
+      <li><a href="#game">Game</a></li>
       <li><a href="#faq">FAQ</a></li>
     </ul>
     <div class="nav-cta">
@@ -179,6 +203,35 @@
       <div class="quokka-wrap rv">
         <span class="float f1">🤳</span><span class="float f2">🪙</span><span class="float f3">☀️</span>
         <div class="quokka-blob"><img src="files/quokka_hi_logo.svg" alt="QuokkaCoin logo"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Game -->
+  <section class="game" id="game">
+    <div class="wrap">
+      <div class="stage rv">
+        <span class="kicker" style="display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;margin-bottom:10px">Game</span>
+        <h2 style="font-family:var(--f-display);font-weight:800;font-size:clamp(28px,4vw,40px);line-height:1.15">Snowfight Showdown</h2>
+        <p class="tagline">Slingshot aim · dodge · blastable snow · outplay the wind. A 2D snowball duel from the QKACOIN family — 10 playable roles, local 2P, no install, runs in your browser.</p>
+        <figure class="game-hero">
+          <img src="files/game/main.webp" alt="Snowfight Showdown gameplay — two teams of snow creatures duelling under an aurora sky" loading="lazy">
+        </figure>
+        <div class="roles">
+          <div class="role"><img src="files/game/roles/plain.webp"  alt="Snowman No-Name" loading="lazy"><span>Snowman No-Name</span></div>
+          <div class="role"><img src="files/game/roles/wan.webp"    alt="Roly the Snow Kid" loading="lazy"><span>Roly the Snow Kid</span></div>
+          <div class="role"><img src="files/game/roles/fei.webp"    alt="Swift the Skier" loading="lazy"><span>Swift the Skier</span></div>
+          <div class="role"><img src="files/game/roles/dun.webp"    alt="Pudge in the Puffer" loading="lazy"><span>Pudge in the Puffer</span></div>
+          <div class="role"><img src="files/game/roles/ling.webp"   alt="Ling the Windwhisperer" loading="lazy"><span>Ling the Windwhisperer</span></div>
+          <div class="role"><img src="files/game/roles/hong.webp"   alt="Boom the Blaster" loading="lazy"><span>Boom the Blaster</span></div>
+          <div class="role"><img src="files/game/roles/sun.webp"    alt="Falcon the Hunter" loading="lazy"><span>Falcon the Hunter</span></div>
+          <div class="role"><img src="files/game/roles/shuang.webp" alt="Icebound Deepfrost" loading="lazy"><span>Icebound Deepfrost</span></div>
+          <div class="role"><img src="files/game/roles/mo.webp"     alt="Ink the Artificer" loading="lazy"><span>Ink the Artificer</span></div>
+          <div class="role"><img src="files/game/roles/hen.webp"    alt="Traceless Snowstep" loading="lazy"><span>Traceless Snowstep</span></div>
+        </div>
+        <div class="game-actions">
+          <a class="btn-grad" href="game/">Play Now ↗</a>
+        </div>
       </div>
     </div>
   </section>
@@ -286,6 +339,7 @@
     <ul class="foot-links">
       <li><a href="#story">About</a></li>
       <li><a href="#token">Token</a></li>
+      <li><a href="#game">Game</a></li>
       <li><a href="#faq">FAQ</a></li>
       <li><a href="https://www.gate.io/trade/QKA_USDT" target="_blank" rel="noopener">Gate.io</a></li>
       <li><a href="https://twitter.com/qkacoin" target="_blank" rel="noopener">X / Twitter</a></li>
