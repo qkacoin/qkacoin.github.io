@@ -1,0 +1,6 @@
+# Internal design docs (specs + plans). This repo is a public GitHub Pages
+# site, so these stay local and are never published.
+docs/
+
+# Scratch directory used by tools/shoot-game.mjs while capturing assets.
+.tmp-game-shots/
