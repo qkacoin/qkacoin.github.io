@@ -1,313 +1,334 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>QuokkaCoin  </title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="files/favicon.jpg" rel="icon">
-  <link href="files/apple-touch-icon.jpg" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="files/css.css" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="files/aos.css" rel="stylesheet">
-  <link href="files/bootstrap.css" rel="stylesheet">
-  <link href="files/bootstrap-icons.css" rel="stylesheet">
-  <link href="files/boxicons.css" rel="stylesheet">
-  <link href="files/glightbox.css" rel="stylesheet">
-  <link href="files/remixicon.css" rel="stylesheet">
-  <link href="files/swiper-bundle.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="files/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Vesperr - v4.1.0
-  * Template URL: https://bootstrapmade.com/vesperr-free-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-  
-    <style>
-        #copyButton {
-            padding: 10px 15px;
-            background-color: #db3434;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        #copyButton:hover {
-            background-color: #a52828;
-        } 
-		#statusMessage {
-            margin-top: 10px;
-            color: #db3434;
-        }
-        /* Game section */
-        #game .btn-play {
-            font-family: "Raleway", sans-serif;
-            font-weight: 500;
-            font-size: 16px;
-            letter-spacing: 1px;
-            display: inline-block;
-            padding: 10px 30px;
-            border-radius: 50px;
-            transition: 0.5s;
-            color: #db3434;
-            border: 2px solid #db3434;
-        }
-        #game .btn-play:hover {
-            background: #db3434;
-            color: #fff;
-        }
-        #game .game-desc {
-            text-align: center;
-            max-width: 720px;
-            margin: 0 auto;
-            font-size: 15px;
-            line-height: 1.9;
-        }
-
-    </style>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QuokkaCoin — The Happiest Meme Coin on Solana</title>
+<meta name="description" content="$QKA: a smiley Solana meme coin with a fixed supply of 31,668,129. Born from the XMC community. No freeze, no future issuance, all vibes.">
+<link rel="icon" href="files/favicon.jpg">
+<link rel="apple-touch-icon" href="files/apple-touch-icon.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FFF9F2; --card:#FFFFFF; --ink:#2B1E14; --mut:#8A7A6C;
+    --o1:#FF8A3D; --o2:#FF5C8A; --o3:#B16CEA; --gold:#FFC94D; --sand:#C68B59;
+    --grad:linear-gradient(90deg,#FF8A3D,#FF5C8A,#B16CEA);
+    --r-lg:24px; --r-md:16px; --sh:0 10px 30px rgba(255,120,80,.14);
+    --f-display:"Baloo 2",system-ui,sans-serif; --f-body:"Inter",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box; margin:0; padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg); color:var(--ink); font-family:var(--f-body); font-size:16px; line-height:1.65; -webkit-font-smoothing:antialiased}
+  ::selection{background:var(--gold)}
+  img{max-width:100%}
+  a{color:inherit; text-decoration:none}
+  .wrap{max-width:1080px; margin:0 auto; padding:0 22px}
+  .grad{background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent}
+  /* ---------- Header ---------- */
+  header{position:sticky; top:0; z-index:50; background:rgba(255,249,242,.82); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border-bottom:1px solid rgba(198,139,89,.16)}
+  .nav{display:flex; align-items:center; justify-content:space-between; height:66px}
+  .brand{display:flex; align-items:center; gap:10px; font-family:var(--f-display); font-weight:800; font-size:20px; letter-spacing:.5px}
+  .brand img{width:38px; height:38px; border-radius:12px}
+  .nav-links{display:flex; align-items:center; gap:26px; list-style:none}
+  .nav-links a{font-weight:600; color:#5d4f40; transition:color .2s}
+  .nav-links a:hover{color:var(--o2)}
+  .nav-cta{display:flex; align-items:center; gap:10px}
+  #hamburger{display:none; background:none; border:0; font-size:26px; cursor:pointer; line-height:1}
+  /* ---------- Buttons ---------- */
+  .btn-grad{display:inline-flex; align-items:center; gap:8px; background:var(--grad); color:#fff; font-weight:700; font-family:var(--f-display); padding:13px 26px; border-radius:999px; border:0; cursor:pointer; font-size:15px; letter-spacing:.4px; box-shadow:0 8px 22px rgba(255,92,138,.32); transition:transform .18s, box-shadow .18s}
+  .btn-grad:hover{transform:translateY(-2px); box-shadow:0 12px 28px rgba(255,92,138,.42)}
+  .btn-ghost{display:inline-flex; align-items:center; gap:8px; background:var(--card); color:var(--ink); font-weight:600; padding:12px 22px; border-radius:999px; border:2px solid #f0dcc8; cursor:pointer; font-size:15px; transition:border-color .2s, transform .18s}
+  .btn-ghost:hover{border-color:var(--o1); transform:translateY(-2px)}
+  /* ---------- Hero ---------- */
+  .hero{position:relative; overflow:hidden; padding:70px 0 90px}
+  .hero::before{content:""; position:absolute; width:560px; height:560px; border-radius:50%; filter:blur(90px); opacity:.5; background:radial-gradient(circle,#FFD9B8,transparent 65%); top:-160px; right:-120px; pointer-events:none}
+  .hero::after{content:""; position:absolute; width:480px; height:480px; border-radius:50%; filter:blur(100px); opacity:.45; background:radial-gradient(circle,#FFC4DC,transparent 65%); bottom:-200px; left:-140px; pointer-events:none}
+  .hero-grid{display:grid; grid-template-columns:1.15fr .85fr; gap:30px; align-items:center; position:relative}
+  .badge{display:inline-flex; align-items:center; gap:8px; background:#fff; border:1.5px solid #f3dfc8; padding:7px 16px; border-radius:999px; font-size:13px; font-weight:600; color:#7a5c3c; margin-bottom:20px}
+  .badge .dot{width:9px; height:9px; border-radius:50%; background:var(--gold); box-shadow:0 0 0 4px rgba(255,201,77,.3)}
+  .hero h1{font-family:var(--f-display); font-weight:800; font-size:clamp(40px,6vw,66px); line-height:1.08; letter-spacing:.5px}
+  .hero p.lede{font-size:clamp(15px,1.6vw,18px); color:var(--mut); max-width:520px; margin:20px 0 30px}
+  .hero-actions{display:flex; gap:14px; flex-wrap:wrap}
+  .hero-note{margin-top:26px; font-size:13px; color:#a3927f; display:flex; align-items:center; gap:8px; flex-wrap:wrap}
+  .mono{font-family:ui-monospace,Menlo,Consolas,monospace; font-size:13px; background:#fff; border:1px solid #f0dcc8; border-radius:8px; padding:4px 10px; color:#7a5c3c}
+  .quokka-wrap{position:relative; justify-self:center}
+  .quokka-blob{width:min(360px,80vw); aspect-ratio:1; border-radius:46% 54% 52% 48%/44% 46% 54% 56%; background:var(--grad); display:grid; place-items:center; padding:26px; animation:blob 9s ease-in-out infinite; box-shadow:0 24px 60px rgba(255,92,138,.28)}
+  .quokka-blob img{width:100%; height:100%; object-fit:contain; border-radius:inherit}
+  @keyframes blob{0%,100%{border-radius:46% 54% 52% 48%/44% 46% 54% 56%}50%{border-radius:52% 48% 44% 56%/54% 52% 46% 48%}}
+  .float{position:absolute; font-size:30px; animation:floaty 4.5s ease-in-out infinite; filter:drop-shadow(0 4px 8px rgba(0,0,0,.08))}
+  .float.f1{top:-26px; left:-34px; animation-delay:0s}
+  .float.f2{top:6%; right:-38px; animation-delay:1.2s; font-size:38px}
+  .float.f3{bottom:2%; left:-44px; animation-delay:2.3s; font-size:36px}
+  @keyframes floaty{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-14px) rotate(5deg)}}
+  /* ---------- Stats ---------- */
+  .stats{padding:34px 0 60px}
+  .stats-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:18px}
+  .stat{background:var(--card); border-radius:var(--r-lg); padding:26px 22px; text-align:center; box-shadow:var(--sh); border:1px solid rgba(240,220,200,.6); transition:transform .2s}
+  .stat:hover{transform:translateY(-5px) rotate(-.5deg)}
+  .stat .num{font-family:var(--f-display); font-weight:800; font-size:clamp(24px,3vw,34px); background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent; line-height:1.15}
+  .stat .lbl{margin-top:6px; font-size:13.5px; font-weight:600; color:var(--mut)}
+  .stat .sub{display:inline-block; margin-top:10px; font-size:11.5px; font-weight:700; letter-spacing:.6px; text-transform:uppercase; color:#fff; background:var(--o1); border-radius:999px; padding:3px 10px}
+  /* ---------- Generic sections ---------- */
+  section{padding:64px 0}
+  .sec-head{text-align:center; max-width:640px; margin:0 auto 44px}
+  .sec-head .kicker{display:inline-block; font-size:12.5px; font-weight:700; letter-spacing:1.6px; text-transform:uppercase; color:var(--o2); margin-bottom:10px}
+  .sec-head h2{font-family:var(--f-display); font-weight:800; font-size:clamp(28px,4vw,40px); line-height:1.15}
+  .sec-head p{color:var(--mut); margin-top:12px}
+  /* ---------- Story ---------- */
+  .story{background:linear-gradient(180deg,transparent, rgba(255,210,170,.16) 18%, rgba(255,196,220,.18) 82%, transparent)}
+  .story-grid{display:grid; grid-template-columns:.9fr 1.1fr; gap:44px; align-items:center}
+  .story-img{position:relative; justify-self:center}
+  .story-img img{width:min(340px,78vw); border-radius:var(--r-lg); box-shadow:0 24px 50px rgba(160,100,40,.18); border:6px solid #fff; transform:rotate(-2deg)}
+  .story-img .tape{position:absolute; top:-14px; left:50%; transform:translateX(-50%) rotate(2deg); background:var(--gold); color:#6b4a1a; font-weight:700; font-size:12px; letter-spacing:.8px; padding:5px 16px; border-radius:6px; box-shadow:0 4px 10px rgba(0,0,0,.1)}
+  .story-copy h3{font-family:var(--f-display); font-weight:800; font-size:clamp(22px,2.6vw,30px); margin:26px 0 12px}
+  .story-copy h3:first-child{margin-top:0}
+  .story-copy p{color:#5d4f40; margin-bottom:12px}
+  .story-copy p:last-child{margin-bottom:0}
+  .story-card{background:#fff; border-radius:var(--r-lg); padding:22px 24px; border:1px solid rgba(240,220,200,.7); margin-top:18px; box-shadow:var(--sh)}
+  .story-card b{color:var(--o2)}
+  /* ---------- Contract ---------- */
+  .contract{text-align:center}
+  .c-box{max-width:760px; margin:0 auto; background:var(--card); border-radius:var(--r-lg); border:1px solid rgba(240,220,200,.7); box-shadow:var(--sh); padding:34px 28px}
+  .c-addr{font-family:ui-monospace,Menlo,Consolas,monospace; font-size:clamp(13px,2vw,17px); font-weight:600; color:var(--ink); background:#FFF6EC; border:1.5px dashed #f0c9a8; border-radius:14px; padding:16px 12px; word-break:break-all; margin:20px 0 22px; letter-spacing:.3px}
+  .c-actions{display:flex; gap:12px; justify-content:center; flex-wrap:wrap}
+  #copyStatus{display:block; margin-top:14px; font-size:13.5px; font-weight:600; color:#2aa46d; min-height:1.2em}
+  /* ---------- Link cards ---------- */
+  .links-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
+  .l-card{background:var(--card); border-radius:var(--r-lg); border:1px solid rgba(240,220,200,.7); box-shadow:var(--sh); padding:26px; display:flex; flex-direction:column; gap:10px; transition:transform .2s, box-shadow .2s}
+  .l-card:hover{transform:translateY(-6px); box-shadow:0 18px 40px rgba(255,120,80,.2)}
+  .l-card .ico{font-size:32px; line-height:1}
+  .l-card h3{font-family:var(--f-display); font-weight:700; font-size:19px}
+  .l-card p{font-size:13.5px; color:var(--mut); flex:1}
+  .l-card .go{font-weight:700; color:var(--o2); font-size:14px}
+  /* ---------- FAQ ---------- */
+  .faq-list{max-width:720px; margin:0 auto; display:grid; gap:12px}
+  details{background:var(--card); border-radius:var(--r-md); border:1px solid rgba(240,220,200,.7); box-shadow:0 6px 16px rgba(255,140,80,.08); overflow:hidden}
+  summary{cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:14px; padding:18px 22px; font-weight:700; font-size:15.5px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+"; font-size:22px; font-weight:400; color:var(--o2); transition:transform .25s; flex:none}
+  details[open] summary::after{transform:rotate(45deg)}
+  details .a{padding:0 22px 20px; color:#5d4f40; font-size:14.5px}
+  details .a a{color:var(--o2); font-weight:600; border-bottom:1px dashed var(--o2)}
+  /* ---------- Footer ---------- */
+  footer{margin-top:40px; border-top:1px solid rgba(198,139,89,.18); padding:40px 0 34px; text-align:center; background:#FFF3E4}
+  .foot-brand{font-family:var(--f-display); font-weight:800; font-size:22px}
+  .foot-links{display:flex; gap:22px; justify-content:center; flex-wrap:wrap; margin:16px 0 20px; list-style:none}
+  .foot-links a{font-weight:600; color:#6b5844; font-size:14px}
+  .foot-links a:hover{color:var(--o2)}
+  .disc{font-size:12px; color:#a3927f; max-width:640px; margin:0 auto}
+  /* ---------- Scroll reveal ---------- */
+  .rv{opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease}
+  .rv.in{opacity:1; transform:none}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important; transition:none!important} html{scroll-behavior:auto} .rv{opacity:1; transform:none}}
+  /* ---------- Responsive ---------- */
+  @media (max-width:920px){
+    .hero-grid{grid-template-columns:1fr; text-align:center; gap:54px}
+    .hero p.lede{margin-inline:auto}
+    .hero-actions,.hero-note{justify-content:center}
+    .quokka-blob{width:min(300px,74vw)}
+    .stats-grid{grid-template-columns:repeat(2,1fr)}
+    .story-grid{grid-template-columns:1fr; gap:40px}
+    .links-grid{grid-template-columns:1fr}
+    .nav-links{position:fixed; inset:66px 0 auto 0; background:#FFF9F2; flex-direction:column; gap:0; padding:10px 22px 20px; border-bottom:1px solid #f0dcc8; display:none; box-shadow:0 18px 30px rgba(0,0,0,.06)}
+    .nav-links.open{display:flex}
+    .nav-links li{width:100%; text-align:center; padding:12px 0}
+    #hamburger{display:block}
+    .nav-cta .btn-grad{padding:10px 18px; font-size:13.5px}
+  }
+  @media (max-width:480px){
+    .stats-grid{grid-template-columns:1fr 1fr; gap:12px}
+    .stat{padding:18px 12px}
+    section{padding:48px 0}
+  }
+</style>
 </head>
+<body>
 
-<body data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-delay="0">
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center">
-    <div class="container d-flex align-items-center justify-content-between">
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <!-- <li><a class="nav-link scrollto" href="#token">Token</a></li> -->
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-		  <li><a class="nav-link scrollto" href="#game">Game</a></li>
-		  <li><a href="https://twitter.com/qkacoin" target="_blank">Twitter</a></li>
-		  <li><a href="https://explorer.solana.com/address/mtQ5jWgCqrgBiSut29b4HV19RkMBGA6vidwTMqhNmyy/instructions" target="_blank">Explorer</a></li>		  
-          <li><a class="nav-link scrollto " href="#faq">FAQ</a></li>
-		  <li class="dropdown"><a class="getstarted scrollto" href="#">Exchangs  </i></a>
-            <ul>
-				<li><a href="https://www.gate.io/trade/QKA_USDT" target="_blank">Gate-QKA/USDT</a></li>
-            </ul>
-  
-      </nav><!-- .navbar -->
-
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top"><img src="files/quokka_hi_logo.svg" alt="Quokka mascot"><span>QKACOIN</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#story">About</a></li>
+      <li><a href="#token">Token</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a class="btn-grad" href="https://www.gate.io/trade/QKA_USDT" target="_blank" rel="noopener">Trade on Gate.io ↗</a>
+      <button id="hamburger" aria-label="Menu">☰</button>
     </div>
-  </header><!-- End Header -->
+  </div>
+</header>
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
-
-    <div class="container">
-      <div class="row">
-        <div id="token-img" class="col-lg-6 order-1 order-lg-2 hero-img aos-init aos-animate" data-aos="fade-left" data-aos-delay="200" style="margin: 0 auto!important;">
-          <img src="files/quokka_hi_logo.svg" class="img-fluid animated" alt="">
+<main id="top">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="rv">
+        <span class="badge"><span class="dot"></span>The happiest animal on Earth, on Solana</span>
+        <h1>The <span class="grad">Happiest</span> Meme Coin on Solana</h1>
+        <p class="lede">Meet $QKA — a smiley Solana community coin born from XMC mining. Fixed supply, zero freeze, zero future issuance, 100% good vibes. Everyone smile!</p>
+        <div class="hero-actions">
+          <a class="btn-grad" href="https://www.gate.io/trade/QKA_USDT" target="_blank" rel="noopener">Trade on Gate.io ↗</a>
+          <a class="btn-ghost" href="#token">View Contract</a>
         </div>
+        <div class="hero-note">☀️ Native to Rottnest Island vibes · 🤳 The world's most selfie-ready mascot</div>
       </div>
-      <div class="row">
-        <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center" style="margin: 0 auto!important;">
-          <h1 data-aos="fade-up" class="aos-init aos-animate">Quokka</h1>
-        </div>
+      <div class="quokka-wrap rv">
+        <span class="float f1">🤳</span><span class="float f2">🪙</span><span class="float f3">☀️</span>
+        <div class="quokka-blob"><img src="files/quokka_hi_logo.svg" alt="QuokkaCoin logo"></div>
       </div>
     </div>
-	
-	
+  </section>
 
-  </section><!-- End Hero -->
-  
-			<div class="container">
-				<div class="section-title aos-init aos-animate" data-aos="fade-up">
-				<blockquote class="twitter-tweet"><p lang="en" dir="ltr">3. As of January 15, 2025, the total amount of XMC1.0 is 31668129.<br>4. <a href="https://twitter.com/search?q=%24QKA&amp;src=ctag&amp;ref_src=twsrc%5Etfw">$QKA</a> contract address: mtQ5jWgCqrgBiSut29b4HV19RkMBGA6vidwTMqhNmyy;<br>Browser address: <a href="https://t.co/9yXQJ7fRk5">https://t.co/9yXQJ7fRk5</a></p>&mdash; quokkacoin (@qkacoin) <a href="https://twitter.com/qkacoin/status/1882754500743864498?ref_src=twsrc%5Etfw">January 24, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-				
-			
-				
-				
-			</div>
-			</div>				
-				
-			
-  
-	<div class="container">
-		<div class="section-title aos-init aos-animate" data-aos="fade-up">
-			<h1 data-aos="fade-up" class="aos-init aos-animate">Solana Contract Address:</h1>
-			<p><li><a href="https://explorer.solana.com/address/mtQ5jWgCqrgBiSut29b4HV19RkMBGA6vidwTMqhNmyy/instructions" target="_blank"><h2>mtQ5jWgCqrgBiSut29b4HV19RkMBGA6vidwTMqhNmyy</h2></a></li></p>
-		</div>
-	</div>
-	
-	
-    
-	
-
-    <section id="about" class="about">
-      <div class="container">
-
-        <div class="section-title aos-init aos-animate" data-aos="fade-up">
-          <h2>About</h2>
-        </div>
-
-      <div class="row aos-init aos-animate" data-aos="fade-up">
-	  <p> 
-Dear Earth Citizens:
-<br><br>
-
-We are quokka who are found on some smaller islands off the coast of Western Australia, particularly Rottnest Island just off Perth and Bald Island near Albany. Isolated, scattered populations also exist in forest and coastal heath between Perth and Albany. A small colony inhabits a protected area of Two Peoples Bay Nature Reserve.
-
-
-<br><br>
-In the mid-2010s, we earned a reputation on the internet as "<a href="https://www.google.com/search?q=the+world%27s+happiest+animal&sxsrf=ALiCzsb75VJfNHpeDfnChLhx5PuNer4KwQ%3A1662125259254&ei=ywQSY6aVD-Kk2roPkpKf8As&ved=0ahUKEwjmppmNm_b5AhViklYBHRLJB74Q4dUDCA4&uact=5&oq=the+world%27s+happiest+animal&gs_lcp=Cgdnd3Mtd2l6EAMyBggAEA0QEzIICAAQHhAKEBMyCggAEB4QCBAKEBM6CggAEEcQ1gQQsANKBAhBGABKBAhGGABQtQZYtQZgtQloAXABeACAAYUBiAGFAZIBAzAuMZgBAKABAcgBCsABAQ&sclient=gws-wiz" target="_blank">the world's happiest animal</a>" and symbols of positivity due to our smiles. Many photos of smiling quokka have been taken since gone viral, and the "quokka selfie" has become a popular social media trend, with celebrities such as Chris Hemsworth, Shawn Mendes, Margot Robbie, Roger Federer and Kim Donghyuk of iKON.
-
-
-
-<br><br>
-
-	  </p>
+  <!-- Stats -->
+  <section class="stats" id="token">
+    <div class="wrap">
+      <div class="stats-grid">
+        <div class="stat rv"><div class="num">31,668,129</div><div class="lbl">Total Supply</div><span class="sub">Fixed forever</span></div>
+        <div class="stat rv"><div class="num">0</div><div class="lbl">Future Issuance</div><span class="sub">No more minted</span></div>
+        <div class="stat rv"><div class="num">0</div><div class="lbl">Freeze Permissions</div><span class="sub">Not a chance</span></div>
+        <div class="stat rv"><div class="num">100%</div><div class="lbl">Circulating</div><span class="sub">All in the wild</span></div>
       </div>
+    </div>
+  </section>
 
+  <!-- Story -->
+  <section class="story" id="story">
+    <div class="wrap story-grid">
+      <div class="story-img rv">
+        <span class="tape">WORLD'S HAPPIEST ANIMAL</span>
+        <img src="files/quokka-2.jpg" alt="A smiling quokka">
       </div>
-    <section><!-- End About Section -->
-
-    <!-- ======= Game Section ======= -->
-    <section id="game" class="game">
-      <div class="container">
-
-        <div class="section-title aos-init aos-animate" data-aos="fade-up">
-          <h2>Game</h2>
-        </div>
-
-        <div class="row aos-init aos-animate" data-aos="fade-up">
-          <div class="col-lg-12">
-            <p class="game-desc">
-              <strong>Snowball Duel</strong> — a physics-based snowball fight. Charge up your throw,
-              read the wind, and lob snowballs across wintry battlefields. Face off against AI rivals,
-              unlock characters, collect items, and conquer the challenge stages. Free to play in your browser.
-            </p>
-            <p style="text-align:center; margin-top:25px;">
-              <a href="/game/" class="btn-play">▶ Play Now</a>
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Game Section -->
-
-    <!-- ======= F.A.Q Section ======= -->
-    <section id="faq" class="faq">
-      <div class="container">
-
-        <div class="section-title aos-init aos-animate" data-aos="fade-up">
-          <h2>Frequently Asked Questions</h2>
-        </div>
-
-        <div class="row faq-item d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-5">
-            <i class="ri-question-line"></i>
-            <h4>What is quokka?</h4>
-          </div>
-          <div class="col-lg-7">
-            <p>
-		Hi, We are quokka who are found on some smaller islands off the coast of Western Australia, particularly Rottnest Island just off Perth and Bald Island near Albany. Isolated, scattered populations also exist in forest and coastal heath between Perth and Albany. A small colony inhabits a protected area of Two Peoples Bay Nature Reserve.<br>
-In the mid-2010s, we earned a reputation on the internet as "the world's happiest animal" and symbols of positivity due to our smiles. Many photos of smiling quokka have been taken since gone viral, and the "quokka selfie" has become a popular social media trend, with celebrities such as Chris Hemsworth, Shawn Mendes, Margot Robbie, Roger Federer and Kim Donghyuk of iKON.Tourist numbers to Rottnest Island have subsequently increased.<br>
-            </p>
-          </div>
-        </div><!-- End F.A.Q Item-->
-
-        <div class="row faq-item d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
-          <div class="col-lg-5">
-            <i class="ri-question-line"></i>
-            <h4>how QKA release?</h4>
-          </div>
-          <div class="col-lg-7">
-		  <p>
-		  
-QKA, derived from XMC mining, was created in response to future global regulatory trends. To ensure long-term development,the XMC project team, respecting the views of the community and the exchange, has decided to convert XMC into a meme coin: QKACOIN.            </p>
-          </div>
-        </div><!-- End F.A.Q Item-->
-		
-		<div class="row faq-item d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
-          <div class="col-lg-5">
-            <i class="ri-question-line"></i>
-            <h4>What is the total amount of QKA?</h4>
-          </div>
-          <div class="col-lg-7">
-		  <p>
-		  The total amount of QKA is 31,668,129, you can check it out on the solana explorer:<a href="https://explorer.solana.com/address/mtQ5jWgCqrgBiSut29b4HV19RkMBGA6vidwTMqhNmyy/instructions" target="_blank">QKA on Solana</a><br>
-		  The total number of QKA is fixed, with no future issuance.
-		  <br>
-		  There are no freezing permissions, allowing all tokens to circulate freely.
-           </p>
-          </div>
-        </div><!-- End F.A.Q Item-->
-
-       
-
-      
-		
-		
-      </div>
-    </section><!-- End F.A.Q Section -->
-
-
-  </section></section></main><!-- End #main -->
-
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <div class="row d-flex align-items-center">
-        <div class="col-lg-3 text-lg-left text-center">
-          <div class="copyright">
-            <strong>QUOKKA</strong>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
-            <!--
-			<a href="#token" class="scrollto">Token</a>
-			 -->
-            <a href="#about" class="scrollto">About</a>
-			<a href="#game" class="scrollto">Game</a>
-			<!--
-            <a href="https://app.uniswap.org/#/swap?outputCurrency=0x761d38e5ddf6ccf6cf7c55759d5210750b5d60f3" target="_blank">Uniswap</a>
-			-->
-            <a href="#faq" class="scrollto">FAQ</a>
-			<a href="https://twitter.com/qkacoin" target="_blank">Twitter</a>
-			<a href="https://explorer.solana.com/address/mtQ5jWgCqrgBiSut29b4HV19RkMBGA6vidwTMqhNmyy/instructions" target="_blank">Explorer</a>
-		<!--
-            <a href="https://coinmarketcap.com/currencies/quokkacoin/" target="_blank">CoinMarketCap</a>
-	    <a href="https://coingecko.com/en/coins/quokkacoin-mars" target="_blank">CoinGecko</a>
-		-->
-          </nav>
+      <div class="story-copy rv">
+        <span class="kicker" style="color:var(--o2);font-size:12.5px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase">About</span>
+        <h3>Why so smiley?</h3>
+        <p>We are quokkas — the famously smiling marsupials of Rottnest Island, off the coast of Western Australia. In the mid-2010s we went viral as the internet's <b>"world's happiest animal"</b>, and the quokka selfie became a global trend — snapped by Chris Hemsworth, Shawn Mendes, Margot Robbie and many more.</p>
+        <div class="story-card">
+          <h3 style="margin:0 0 10px;font-size:19px">From XMC to <span class="grad">QKACOIN</span></h3>
+          <p style="margin:0">QKA was born from XMC mining, in response to where global regulation is heading. To keep the project healthy for the long run, the XMC team listened to the community and the exchange and turned XMC into a meme coin: <b>$QKA</b>. A token with nothing to hide — and a face that won't stop smiling.</p>
         </div>
       </div>
     </div>
-  </footer><!-- End Footer -->
+  </section>
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <!-- Contract -->
+  <section class="contract">
+    <div class="wrap">
+      <div class="c-box rv">
+        <span class="kicker" style="font-size:12.5px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--o2)">Token on Solana</span>
+        <h2 style="font-family:var(--f-display);font-weight:800;font-size:clamp(26px,3.4vw,36px);margin-top:8px">The Contract</h2>
+        <p style="color:var(--mut);font-size:14.5px">Verify everything on-chain — supply, holders, transactions.</p>
+        <div class="c-addr" id="contractAddr">mtQ5jWgCqrgBiSut29b4HV19RkMBGA6vidwTMqhNmyy</div>
+        <div class="c-actions">
+          <button class="btn-grad" id="copyBtn">📋 Copy Contract</button>
+          <a class="btn-ghost" href="https://explorer.solana.com/address/mtQ5jWgCqrgBiSut29b4HV19RkMBGA6vidwTMqhNmyy/instructions" target="_blank" rel="noopener">Open in Solana Explorer ↗</a>
+        </div>
+        <span id="copyStatus" role="status"></span>
+      </div>
+    </div>
+  </section>
 
-  <!-- Vendor JS Files -->
-  <script src="files/aos.js"></script>
-  <script src="files/bootstrap.js"></script>
-  <script src="files/glightbox.js"></script>
-  <script src="files/isotope.js"></script>
-  <script src="files/validate.js"></script>
-  <script src="files/purecounter.js"></script>
-  <script src="files/swiper-bundle.js"></script>
+  <!-- Links -->
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="links-grid">
+        <a class="l-card rv" href="https://www.gate.io/trade/QKA_USDT" target="_blank" rel="noopener">
+          <span class="ico">🟢</span><h3>Trade on Gate.io</h3>
+          <p>The QKA/USDT pair is live on Gate.io. Hop in and grab your share of the smile.</p>
+          <span class="go">Trade now →</span>
+        </a>
+        <a class="l-card rv" href="https://twitter.com/qkacoin" target="_blank" rel="noopener">
+          <span class="ico">🐦</span><h3>Follow on X</h3>
+          <p>Community news, memes and the occasional celebrity quokka selfie — all on @qkacoin.</p>
+          <span class="go">Follow @qkacoin →</span>
+        </a>
+        <a class="l-card rv" href="https://explorer.solana.com/address/mtQ5jWgCqrgBiSut29b4HV19RkMBGA6vidwTMqhNmyy/instructions" target="_blank" rel="noopener">
+          <span class="ico">🔍</span><h3>Check the Chain</h3>
+          <p>Fixed supply of 31,668,129, all circulating, no surprises. See it for yourself on-chain.</p>
+          <span class="go">Open Explorer →</span>
+        </a>
+      </div>
+    </div>
+  </section>
 
-  <!-- Template Main JS File -->
-  <script src="files/main.js"></script>
-  
-  
+  <!-- FAQ -->
+  <section id="faq" style="background:linear-gradient(180deg,transparent,rgba(255,201,77,.10) 30%,rgba(255,140,80,.08) 100%)">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="kicker">FAQ</span>
+        <h2>Questions, answered</h2>
+        <p>Everything you wanted to know about the happiest coin in crypto.</p>
+      </div>
+      <div class="faq-list">
+        <details class="rv" open>
+          <summary>What is QuokkaCoin?</summary>
+          <div class="a">Quokkas are smiley marsupials from Rottnest Island, Western Australia, famous as the internet's "world's happiest animal." <b>QKACOIN ($QKA)</b> is a Solana meme coin built around the quokka spirit — cheerful, community-owned and transparent.</div>
+        </details>
+        <details class="rv">
+          <summary>How was QKA born?</summary>
+          <div class="a">$QKA comes from XMC mining. Facing tightening global regulations, the XMC project team respected the views of its community and exchange partners and decided to convert XMC into a community meme coin: QuokkaCoin. A fresh start, same family.</div>
+        </details>
+        <details class="rv">
+          <summary>What about the token supply?</summary>
+          <div class="a">The total supply of QKA is <b>31,668,129</b> — fully verifiable on the <a href="https://explorer.solana.com/address/mtQ5jWgCqrgBiSut29b4HV19RkMBGA6vidwTMqhNmyy/instructions" target="_blank" rel="noopener">Solana Explorer</a>. It is fixed with no future issuance, and there are no freezing permissions, so every single token can circulate freely.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
 
+<footer>
+  <div class="wrap">
+    <div class="foot-brand">🦘 QKACOIN</div>
+    <ul class="foot-links">
+      <li><a href="#story">About</a></li>
+      <li><a href="#token">Token</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="https://www.gate.io/trade/QKA_USDT" target="_blank" rel="noopener">Gate.io</a></li>
+      <li><a href="https://twitter.com/qkacoin" target="_blank" rel="noopener">X / Twitter</a></li>
+      <li><a href="https://explorer.solana.com/address/mtQ5jWgCqrgBiSut29b4HV19RkMBGA6vidwTMqhNmyy/instructions" target="_blank" rel="noopener">Explorer</a></li>
+    </ul>
+    <p class="disc">$QKA is a meme coin with no intrinsic value or promise of financial return. Crypto assets are volatile — always do your own research and never invest more than you can afford to lose.</p>
+  </div>
+</footer>
 
+<script>
+(function(){
+  // Mobile menu
+  var ham = document.getElementById('hamburger'), links = document.getElementById('navLinks');
+  ham.addEventListener('click', function(){ links.classList.toggle('open'); });
+  links.addEventListener('click', function(e){ if(e.target.tagName==='A') links.classList.remove('open'); });
 
+  // Copy contract address
+  var btn = document.getElementById('copyBtn'), statusEl = document.getElementById('copyStatus');
+  var addr = document.getElementById('contractAddr').textContent.trim();
+  btn.addEventListener('click', function(){
+    function done(ok){
+      statusEl.textContent = ok ? 'Copied to clipboard ✓' : 'Press Ctrl+C to copy the address above';
+      setTimeout(function(){ statusEl.textContent = ''; }, 2600);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(addr).then(function(){ done(true); }, function(){ done(false); });
+    } else {
+      var ta = document.createElement('textarea');
+      ta.value = addr; ta.style.position='fixed'; ta.style.opacity='0';
+      document.body.appendChild(ta); ta.select();
+      try { done(document.execCommand('copy')); } catch(e){ done(false); }
+      document.body.removeChild(ta);
+    }
+  });
 
-
-</body></html>
+  // Scroll reveal
+  var rvs = document.querySelectorAll('.rv');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { threshold: .12 });
+    rvs.forEach(function(el){ io.observe(el); });
+  } else { rvs.forEach(function(el){ el.classList.add('in'); }); }
+})();
+</script>
+</body>
+</html>
