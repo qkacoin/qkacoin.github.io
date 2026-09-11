@@ -113,7 +113,8 @@
   details .a a{color:var(--o2); font-weight:600; border-bottom:1px dashed var(--o2)}
   /* ---------- Footer ---------- */
   footer{margin-top:40px; border-top:1px solid rgba(198,139,89,.18); padding:40px 0 34px; text-align:center; background:#FFF3E4}
-  .foot-brand{font-family:var(--f-display); font-weight:800; font-size:22px}
+  .foot-brand{display:inline-flex; align-items:center; gap:10px; font-family:var(--f-display); font-weight:800; font-size:22px}
+  .foot-brand img{width:32px; height:32px; border-radius:10px}
   .foot-links{display:flex; gap:22px; justify-content:center; flex-wrap:wrap; margin:16px 0 20px; list-style:none}
   .foot-links a{font-weight:600; color:#6b5844; font-size:14px}
   .foot-links a:hover{color:var(--o2)}
@@ -281,7 +282,7 @@
 
 <footer>
   <div class="wrap">
-    <div class="foot-brand">🦘 QKACOIN</div>
+    <div class="foot-brand"><img src="files/quokka_hi_logo.svg" alt="">QKACOIN</div>
     <ul class="foot-links">
       <li><a href="#story">About</a></li>
       <li><a href="#token">Token</a></li>
